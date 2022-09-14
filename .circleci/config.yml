@@ -27,5 +27,3 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - build:
-          context: first_context
