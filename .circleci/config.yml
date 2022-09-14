@@ -20,6 +20,9 @@ jobs:
       - run:
           name: "echo an env var"
           command: echo $test_variable_1
+      - run:
+          name: "echo a context variable"
+          command: echo $context_ev
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -27,3 +30,4 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+      context: first_context
